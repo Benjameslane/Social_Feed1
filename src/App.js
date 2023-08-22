@@ -9,6 +9,8 @@ function App() {
 
 const [entries, setEntries] = useState([{Name: 'Benjamin Lane', Post: 'My first post!'}, {Name: 'Kyra Mourey', Post: 'I love SocialFeed!'}])
 
+
+
 function addNewPost(entry){
   let tempEntries = [...entries, entry];
   setEntries(tempEntries);
@@ -16,10 +18,29 @@ function addNewPost(entry){
 
 
   return (
-    <div>
-  <NavBar />
-  <PostList parentEntries={entries} />
-  <Post addNewPostProperty={addNewPost}/>
+    <div className='container-fluid'>
+      <div className='row'>
+      <div className='col-md-12'>
+      <NavBar />
+        </div>
+
+        <div className='col-md-6'>
+        <div className='border-box'>
+          
+        <Post addNewPostProperty={addNewPost}/>
+        </div>
+        </div>
+      </div>
+      <div className='col-md-6'>
+      <div className='border-box'>
+      <PostList parentEntries={entries} />
+     
+      
+      </div>
+</div>
+  
+ 
+  
   
   </div>
 
