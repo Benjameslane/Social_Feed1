@@ -1,3 +1,6 @@
+import StatusButton from "../StatusButton/StatusButton";
+
+
 
 const PostList = (props) => {
     return ( 
@@ -17,8 +20,9 @@ const PostList = (props) => {
                
                 <td>{entry.Name}</td>
                 <td>{entry.Post}</td>
-                <td> <button type="button" class="btn btn btn-primary" enabled>Like</button>
-                <button type="button" class="btn btn-secondary btn" enabled>Dislike</button></td>
+                <StatusButton/>
+                {/* <td> <button type="button" class="btn btn btn-primary" enabled>Like</button>
+                <button type="button" class="btn btn-secondary btn" enabled>Dislike</button></td> */}
               </tr>
           );
         })}
