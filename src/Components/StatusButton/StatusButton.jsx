@@ -3,6 +3,8 @@ import React, { useState } from "react";
 
 // import { ReactComponent as Hand } from "./hand.svg";
 import './StatusButton.css';
+import ThumbUpIcon from '@mui/icons-material/ThumbUp';
+import ThumbDownIcon from '@mui/icons-material/ThumbDown';
 
 
 const StatusButton = () => {
@@ -37,16 +39,22 @@ const StatusButton = () => {
 
 
   return (
-      <><div>
-      <button className={[userliked ? 'like' : null, ''].join('')} type="submit" onClick={liked}>
-        Like
+      <div>
+        <button>
+            <ThumbUpIcon
+              className={[userliked ? 'like' : null, ''].join('')} type="submit" onClick={liked}>
+            Like
+            </ThumbUpIcon>
+        </button>
+
+
+
+      <button>
+          <ThumbDownIcon className={[userdislike ? 'dislike' : null, ''].join('')} type="submit" onClick={disliked}>
+          Disike
+          </ThumbDownIcon>
       </button>
-
-
-
-    </div><div>  <button className={[userdislike ? 'dislike' : null, ''].join('')} type="submit" onClick={disliked}>
-      Disike
-    </button></div></>
+    </div>
 
     // <button
     //   onClick={() => setLiked(!liked)}

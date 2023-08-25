@@ -44,13 +44,26 @@ body {
     background-color: #777;
 }
 
+.table{
+    text-align: center;
+ 
+}
+
+.postbox{
+    text-align: center;
+    align-items: center;
+}
+
+
 .border-box{
     border: 1px;
-    border-style: solid;
+    border-style:solid;
     border-color: black;
     margin: 1rem;
     padding: 1rem;
+   
 }
+
 
 
 

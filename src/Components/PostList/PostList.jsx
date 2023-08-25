@@ -9,6 +9,7 @@ const PostList = (props) => {
       <thead>
         <tr>
           <th>Name</th>
+          
           <th>Post</th>
           <th>React</th>
         </tr>
