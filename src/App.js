@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import NavBar from './Components/NavBar/NavBar'
 import PostList from './Components/PostList/PostList'
-import Post from './Components/Post'
+import Post from './Components/Post/Post'
 
 
 
@@ -19,30 +19,22 @@ function addNewPost(entry){
 
   return (
     <div className='container-fluid'>
-      <div className='row'>
+
       <div className='col-md-12'>
       <NavBar />
         </div>
+        <section className='main-container'>
 
-        <div className='col-md-6'>
-        <div className='border-box'>
-          
-        <Post addNewPostProperty={addNewPost}/>
-        </div>
-        </div>
-      </div>
-      <div className='col-md-6'>
-      <div className='border-box'>
-      <PostList parentEntries={entries} />
-     
-      
-      </div>
+              <div className='post-container'>
+                <Post addNewPostProperty={addNewPost}/>
+                <br></br>
+                <PostList parentEntries={entries} />
+              </div>
+
+        </section>
+
 </div>
   
- 
-  
-  
-  </div>
 
   );
   
